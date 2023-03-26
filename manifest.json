@@ -1,0 +1,20 @@
+{
+    "name": "Syllabus Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions":[
+      "storage",
+      "tabs"
+    ],
+    "action": {
+      "default_title": "Booked",
+      "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+          "matches": [ "<all_urls>" ],
+          "js": ["popup/jquery.min.js", "js/favorite.js", "js/morebtn_hidden.js", "js/settings.js"]
+        }
+        ]
+}
